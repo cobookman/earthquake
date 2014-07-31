@@ -2,7 +2,7 @@ var request = require('request');
 var parseCSV = require('csv').parse;
 
 function earthquakes() {
-  this.ttl =  60 * 1000; //every 60 seconds fetch new data
+  this.ttl = 2.5 * 60 * 1000; //every 2.5 mins fetch new data
   this.dataFetchedAt = null; //time of the when data last refreshed
   this.srcURL = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.csv';
   this.dataType = 'csv';
