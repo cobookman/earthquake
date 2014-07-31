@@ -1,0 +1,16 @@
+curl -XPUT 'localhost:9200/_river/w0rd/_meta' -d '{
+	"type" : "couchdb",
+	"couchdb" : {
+		"host" :  "localhost",
+		"port" : "5984",
+		"db" : "w0rd",
+		"filter" : null
+	},
+	"index" : {
+		"index" : "w0rd",
+		"type" : "w0rd",
+		"bulk_size" : "100",
+		"bulk_timeout" : "10ms"
+	}
+}'
+

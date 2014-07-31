@@ -1,0 +1,177 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+    <!-- Mobile dropdown button, three bars -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Frat Word</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/upload">Upload</a></li>
+        <li><a href="/word">Word</a></li>
+        <li><a href="/help">Help</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-md-6 col-lg-6">
+    {{{upload_status}}}
+    <h1>Upload Word</h1>
+      <form role="form" method="POST" action="/upload" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="department">Course Department</label>
+          <select required id="department" name="department" class="form-control">
+            <option value="">Please Select</option>
+            <option value="ACCT">Accounting</option>
+            <option value="AERO">Aerospace Engineering</option>
+            <option value="AE">Aerospace Engineering</option>
+            <option value="AS">Air Force Aerospace Studies</option>
+            <option value="APPH">Applied Physiology</option>
+            <option value="ASE">Applied Systems Engineering</option>
+            <option value="ARBC">Arabic</option>
+            <option value="ARCH">Architecture</option>
+            <option value="BIOL">Biology</option>
+            <option value="BMEJ">Biomed Engr/Joint Emory PKU</option>
+            <option value="BMED">Biomedical Engineering</option>
+            <option value="BMEM">Biomedical Engr/Joint Emory</option>
+            <option value="BC">Building Construction</option>
+            <option value="CETL">Center Enhancement-Teach/Learn</option>
+            <option value="CHBE">Chemical & Biomolecular Engr</option>
+            <option value="CHEM">Chemistry</option>
+            <option value="CHIN">Chinese</option>
+            <option value="CP">City Planning</option>
+            <option value="CEE">Civil and Environmental Engr</option>
+            <option value="COA">College of Architecture</option>
+            <option value="COE">College of Engineering</option>
+            <option value="CX">Computational Mod, Sim, & Data</option>
+            <option value="CSE">Computational Science & Engr</option>
+            <option value="CS">Computer Science</option>
+            <option value="COOP">Cooperative Work Assignment</option>
+            <option value="UCGA">Cross Enrollment</option>
+            <option value="EAS">Earth and Atmospheric Sciences</option>
+            <option value="ECON">Economics</option>
+            <option value="ECE">Electrical & Computer Engr</option>
+            <option value="ENGL">English</option>
+            <option value="ENTR">Enterprise Transformation</option>
+            <option value="FS">Foreign Studies</option>
+            <option value="FREN">French</option>
+            <option value="GT">Georgia Tech</option>
+            <option value="GTL">Georgia Tech Lorraine</option>
+            <option value="GRMN">German</option>
+            <option value="HPS">Health Performance Science</option>
+            <option value="HP">Health Physics</option>
+            <option value="HS">Health Systems</option>
+            <option value="HIN">Hindi</option>
+            <option value="HIST">History</option>
+            <option value="HTS">History, Technology & Society</option>
+            <option value="ISYE">Industrial & Systems Engr</option>
+            <option value="ID">Industrial Design</option>
+            <option value="IPCO">Int'l Plan Co-op Abroad</option>
+            <option value="IPIN">Int'l Plan Intern Abroad</option>
+            <option value="IPFS">Int'l Plan-Exchange Program</option>
+            <option value="IPSA">Int'l Plan-Study Abroad</option>
+            <option value="INTA">International Affairs</option>
+            <option value="IL">International Logistics</option>
+            <option value="INTN">Internship</option>
+            <option value="IMBA">Intl Executive MBA</option>
+            <option value="JAPN">Japanese</option>
+            <option value="KOR">Korean</option>
+            <option value="LATN">Latin</option>
+            <option value="LS">Learning Support</option>
+            <option value="LING">Linguistics</option>
+            <option value="LCC">Lit, Communication & Culture</option>
+            <option value="MGT">Management</option>
+            <option value="MOT">Management of Technology</option>
+            <option value="MSE">Materials Science & Engr</option>
+            <option value="MATH">Mathematics</option>
+            <option value="ME">Mechanical Engineering</option>
+            <option value="MP">Medical Physics</option>
+            <option value="MSL">Military Science & Leadership</option>
+            <option value="ML">Modern Languages</option>
+            <option value="MUSI">Music</option>
+            <option value="NS">Naval Science</option>
+            <option value="NRE">Nuclear & Radiological Engr</option>
+            <option value="PERS">Persian</option>
+            <option value="PHIL">Philosophy</option>
+            <option value="PHYS">Physics</option>
+            <option value="POL">Political Science</option>
+            <option value="PTFE">Polymer, Textile and Fiber Eng</option>
+            <option value="DOPP">Professional Practice</option>
+            <option value="PSYC">Psychology</option>
+            <option value="PSY">Psychology</option>
+            <option value="PUBP">Public Policy</option>
+            <option value="PUBJ">Public Policy/Joint GSU PhD</option>
+            <option value="RGTR">Regents' Reading Skills</option>
+            <option value="RGTE">Regents' Writing Skills</option>
+            <option value="RUSS">Russian</option>
+            <option value="SCI">Science</option>
+            <option value="SOC">Sociology</option>
+            <option value="SPAN">Spanish</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="number">Course Number</label>
+          <input required type="text" class="form-control" id="number" name="number" placeholder="E.g: 1502">
+        </div>
+        <div class="form-group">
+          <label for="semester">Semester course was taught</label>
+          <select required id="semester" name="semester" class="form-control">
+            <option value="">Please Select</option>
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+            <option value="Fall">Fall</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="year">Year course was taught</label>
+          <input required type="text" class="form-control" id="year" name="year" placeholder="E.g: 2013">
+        </div>
+        <div class="form-group">
+          <label for="prof">Professor's Name</label>
+          <input required type="text" class="form-control" id="prof" name="prof" placeholder="First Last">
+        </div>
+        <div class="form-group">
+          <label for="fileType">Type of file</label>
+          <select required id="fileType" name="fileType" class="form-control">
+            <option value="">Please Select</option>
+            <option value="Test">Test</option>
+            <option value="Quiz">Quiz</option>
+            <option value="Homework">Homework</option>
+            <option value="Notes">Notes</option>
+            <option value="Project">Project</option>
+            <option value="Code">Code</option>
+            <option value="Presentation">Presentation</option>
+            <option value="Syllabus">Syllabus</option>
+            <option value="Other">other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="answers">Does the document contain solutions/answers</label>
+          <select required id="answers" name="answers" class="form-control">
+            <option value="">Please Select</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="keywords">Title/Keywords describing contents of the document</label>
+          <input required type="text" class="form-control" id="keywords" name="keywords" placeholder="Exam 3 Solutions">
+        </div>
+        <div class="form-group">
+          <label for="description">Describe the contents of the document</label>
+          <textarea class="form-control" rows="3" id="description" name="description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="wordFile">File Upload</label>
+          <input required type="file" id="wordFile" name="wordFile">
+        </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</div><!-- END container -->

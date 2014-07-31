@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Is there an earthquake near me?">
+    <meta name="author" content="Colin Bookman">
+    <link rel="shortcut icon" href="/ico/favicon.png">
+    <title>Earthquake?</title>
+    <style>
+      html, body, .abs-container {
+        width:100%;
+      }
+      .abs-container {
+        text-align: center;
+        position:absolute;
+        vertical-align: middle;
+      }
+      .xxxxl-text {
+        font-size:5rem;
+      }
+      .xxl-text {
+        font-size:3rem;
+      }
+      #footer {
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        height:30px;
+        width:100%;
+        background:#d7d7d7;
+        padding:15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="abs-container">
+      <div id="msg">
+        Click on 'share location'.  If you don't this wont work :(
+      </div>
+    </div>
+    <div id="footer">
+      By: 
+      <script type="text/javascript" language="javascript">
+      <!--
+      // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+      // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+      // This code is freeware provided these four comment lines remain intact
+      // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+      { coded = "19P99TYu6@xYunJ.19Y"
+        key = "s6dZQzroVBhfuPqNUSCH0gDkAi9F5l8wmOXpRLEcxKTWn7MjJItYe3vaby14G2"
+        shift=coded.length
+        link=""
+        for (i=0; i<coded.length; i++) {
+          if (key.indexOf(coded.charAt(i))==-1) {
+            ltr = coded.charAt(i)
+            link += (ltr)
+          } else {     
+            ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+            link += (key.charAt(ltr))
+          }
+        }
+        document.write("<a href='mailto:"+link+"'>Colin Bookman</a>")
+      }
+      //-->
+      </script>
+       in less than 2 hours
+    </div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <!-- node.js writes data here...hacky but i don't want to spend time
+          doing this the right way...as it requries lots of ajax calls and stuff
+          and this is supposed to be a simple app
+    -->
+
